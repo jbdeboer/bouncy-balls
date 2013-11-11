@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="angular.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-app="animateApp" ng-controller="AnimateCtrl">
+  
+  <div class="boundingBox">
+    <ball ng-repeat="shape in shapes"
+    x="shape.x"
+    y="shape.y"
+    color="shape.color" />
+  </div>
+  <div>
+    FPS: {{fps() | number:1 }}
+  </div>
+  
+</body>
+</html>
